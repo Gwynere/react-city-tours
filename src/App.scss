@@ -1,0 +1,81 @@
+@import './index.scss';
+
+.tour-list{
+    width: 70vw;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tour{
+    background: $mainGrey;
+    border-radius: .8rem;
+
+    img{
+        width: 100%;
+        display: block;
+    }
+}
+
+.img-container{
+    position: relative;
+
+    &:hover .close-btn{
+        opacity: 1;
+    }
+}
+
+.close-btn{
+    position: absolute;
+    display: block;
+    top: 5%;
+    right: 5%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .3s linear;
+    opacity: 0;
+}
+
+.tour-info{
+    padding: 1rem .5rem;
+
+    h3{
+        text-transform: uppercase;
+    }
+
+    h4{
+        text-transform: capitalize;
+        color: $mainBlack;
+        margin: .2rem 0 .6rem 0;
+    }
+
+    h5{
+        text-transform: capitalize;
+
+        span{
+            margin: .5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .tour-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .tour-list{
+        width: 85vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1140px){
+    .tour-list{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
